@@ -18,6 +18,7 @@
 		<spring-cloud.version>2022.0.4</spring-cloud.version>
 	</properties>
 	<dependencies>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -67,6 +68,10 @@
 
 	<build>
 		<plugins>
+			<plugin>
+		    <groupId>org.flywaydb</groupId>
+		    <artifactId>flyway-maven-plugin</artifactId>
+		</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

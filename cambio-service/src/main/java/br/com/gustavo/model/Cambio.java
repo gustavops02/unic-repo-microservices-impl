@@ -24,7 +24,7 @@ public class Cambio {
 	private String to;
 	
 	@Column(nullable = false)
-	private BigDecimal conversionFactior;
+	private BigDecimal conversionFactor;
 	
 	@Transient
 	private BigDecimal convertedValue;
@@ -35,12 +35,12 @@ public class Cambio {
 	public Cambio() {
 	}
 	
-	public Cambio(Long id, String from, String to, BigDecimal conversionFactior, BigDecimal convertedValue,
+	public Cambio(Long id, String from, String to, BigDecimal conversionFactor, BigDecimal convertedValue,
 			String environment) {
 		this.id = id;
 		this.from = from;
 		this.to = to;
-		this.conversionFactior = conversionFactior;
+		this.conversionFactor = conversionFactor;
 		this.convertedValue = convertedValue;
 		this.environment = environment;
 	}
@@ -69,12 +69,12 @@ public class Cambio {
 		this.to = to;
 	}
 
-	public BigDecimal getConversionFactior() {
-		return conversionFactior;
+	public BigDecimal getConversionFactor() {
+		return conversionFactor;
 	}
 
-	public void setConversionFactior(BigDecimal conversionFactior) {
-		this.conversionFactior = conversionFactior;
+	public void setConversionFactor(BigDecimal conversionFactior) {
+		this.conversionFactor = conversionFactior;
 	}
 
 	public BigDecimal getConvertedValue() {

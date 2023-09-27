@@ -7,14 +7,15 @@ spring:
     name: cambio-service
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgres://localhost:5432/course
+    url: jdbc:postgresql://localhost:5432/cambio_service
     username: postgres
   jpa:
     hibernate:
       ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
   flyway:
-    url: jdbc:postgres://localhost:5432/
+    url: jdbc:postgresql://localhost:5432/
     schemas:
-    - course
+    - cambio_service
     user: postgres
