@@ -1,16 +1,31 @@
 package br.com.gustavo.model;
 
+import jakarta.persistence.*;
+
 import java.util.Date;
 import java.util.Objects;
 
+@Entity
 public class Book {
 
-    private Long id;
+    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
+    @Column(nullable = false)
     private String author;
+
+    @Column(nullable = false)
+    @Temporal(TemporalType.DATE)
     private Date launchDate;
+
+    @Column(nullable = false)
     private Double price;
+
+    @Column(nullable = false)
     private String title;
+
+    @Transient
     private String currency;
+
+    @Transient
     private String environment;
 
     public Book() {
